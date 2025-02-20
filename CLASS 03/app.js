@@ -1,185 +1,122 @@
-// Chapter 10-1
+// Chapter 10-15
+
+// Chapter 10 (if statements)
 
 
+// Q 01
 
-//QUESTION 6
+var city = "karachi";
 
-var greeting;
-var hour = 19;
-if (hour < 18) {
-    greeting = "Good day";
-} else { 
-    greeting = "Good evening";
-}
-console.log(greeting)
+if (city.toLowerCase() == "karachi");
+    {
 
-//QUESTION 7
+  console.log("The city light",city);
 
-var time = prompt("Enter time in 24-hour format (e.g., 1900 for 7 PM):");
-
-if (time >= 0 && time < 1200) {
-    console.log("Good Morning!");
-} else if (time >= 1200 && time < 1700) {
-    console.log("Good Afternoon!");
-} else if (time >= 1700 && time < 2100) {
-    console.log("Good Evening!");
-} else if (time >= 2100 && time <= 2359) {
-    console.log("Good Night!");
-} else {
-    console.log("Invalid time entered. Please enter a valid 24-hour format time.");
 }
 
-//QUESTION 7
+// Q 02
 
-var city = prompt("Enter the name of your city:");
 
-if (city.toLowerCase() === "karachi") {
-    console.log("Welcome to the city of lights");
-} else {
-    console.log("Welcome to " + city);
+ var x = "y";
+ var y = "y";
+if (x === y) {
+    var Zvalue = prompt("Please enter the value of z?");
+
+  }
+
+// Q 03
+
+
+var z = 10010;
+
+if (z === 10010) {
+    alert("Karachi");
+  } else {
+    alert("Please write correct city");
+  }
+
+// Q 04
+
+var x_2 = 10; 
+
+if (x_2 === 10) {
+  x_2 = 1;  
 }
 
-//QUESTION 8
+console.log(x_2); 
 
-var gender = prompt("Enter your gender")
+// Chap Chapter 11 (Comparison Operators)
 
-if (gender.toLowerCase() === "male"){
-    console.log("Welcome sir")
-} else if (gender.toLowerCase() === "female"){
-    console.log("welcome mam")
-} else {
-    console.log("welcome")
-}
+// Q 01
 
-//QUESTION 9
+var a = 8
+var b = 5
+if (!(a === b)) {
 
-var signalColor = prompt("Enter the traffic signal color (Red/Yellow/Green):");
-
-if (signalColor.toLowerCase() === "red") {
-    console.log("Must Stop");
-} else if (signalColor.toLowerCase() === "yellow") {
-    console.log("Ready to move");
-} else if (signalColor.toLowerCase() === "green") {
-    console.log("Move now");
-} else {
-    console.log("Invalid color entered");
-}
-
-//QUESTION 10
-
-var fuel = prompt("Enter the remaining fuel in your car (in litres):");
-
-if (fuel < 0.25) {
-    console.log("Please refill the fuel in your car");
-} else{
-    console.log("You have enough fuel")
-}
-
-
-//QUESTION 11
-
-var subject1 = +prompt("Enter marks obtained in first subject:");
-var subject2 = +prompt("Enter marks obtained in second subject:");
-var subject3 = +prompt("Enter marks obtained in third subject:");
-var totalMarks = 300;
-var obtainedMarks = subject1 + subject2 + subject3;
-var percentage = (obtainedMarks / totalMarks) * 100;
-var grade;
-var remarks;
-
-if (percentage >=80) {
-    grade = "A-one";
-} else if (percentage >=70) {
-    grade = "A";
-} else if (percentage >= 60) {
-    grade = "B";
-} else{
-    grade = "F";
-}
-
-if (percentage >=80) {
-    remarks = "Excellent";
-} else if (percentage >=70) {
-    remarks = "Good";
-} else if (percentage >=60) {
-    remarks = "You need to improve";
-} else  {
-    remarks = "Sorry";
-}
-document.write("<h1>Mark sheet</h1>")
-document.write("Total Marks = ",totalMarks , "<br>")
-document.write( "Obtained Marks = ", obtainedMarks,"<br>")
-document.write( "Percentage= ", percentage,"<br>")
-document.write( "Grade = ", grade,"<br>")
-document.write( "Remarks = ", remarks,"<br>")
-
-//QUESTION 12
-
-var secretNumber = 8;
-
-if (secretNumber !== 8) {
-  console.log("“Close enough to the correct answer”.");
-} else {
-  console.log("“Bingo! Correct answer”.");
-}
-
-//QUESTION 13
-
-var number = +prompt("Enter a number to check if it is divisible by 3:");
-
-if (number % 3 === 0) {
-    console.log("The number is divisible by 3");
-} else {
-    console.log("The number is not divisible by 3");
 }
 
 
 
-//QUESTION 14
+// Q 02
 
-var evenOddNumber = +prompt("Enter a number to check if it is even or odd:");
+var a = 8
+var b = 5
+if (a >= b) {
 
-if (evenOddNumber % 2 === 0) {
-    console.log("The number is even");
-} else {
-    console.log("The number is odd");
+}
+
+// Q 03
+
+var myVar = 7;
+
+if (myVar !== 10) { 
+  myVar = 10;     
+  
+console.log(myVar);
+}
+
+// Q 04
+
+var number1 = 5;
+var number2 = 10;
+
+
+if (number1 !== number2) {
+
+    alert("Congratulations!");
 }
 
 
-//QUESTION 15
+// Q 04
 
-var T = 40;
 
-if (T>=40) {
-    console.log("“It is too hot outside.”")
-} else if (T>30) {
-    console.log("“The Weather today is Normal.”")
-} else if (T>20) {
-    console.log("Today’s Weather is cool.")
-} else  {
-    console.log("“OMG! Today’s weather is so Cool.”")
+var firstName = prompt("Please enter your first name:");
+
+
+var otherName = "Ahmed";
+
+
+if (firstName !== otherName) {
+
+  alert("No match");
+
 }
 
 
-// QUESTION 16
+// Chap 12 (if…else and else if statements)
 
-var firstNumber = +prompt("Enter the first number:");
-var secondNumber = +prompt("Enter the second number:");
-var operation = prompt("Enter the operation (+, -, *, /, %):");
+// Q 01
 
-if (operation === "+") {
-    console.log("Result: " + (firstNumber + secondNumber));
-} else if (operation === "-") {
-    console.log("Result: " + (firstNumber - secondNumber));
-} else if (operation === "*") {
-    console.log("Result: " + (firstNumber * secondNumber));
-} else if (operation === "/") {
-    console.log("Result: " + (firstNumber / secondNumber));
-} else if (operation === "%") {
-    console.log("Result: " + (firstNumber % secondNumber));
+var value1 = 10;
+var value2 = 5;
+
+
+if (value1 >= value2) {
+    alert("if so, display ");
+} 
+else {
+    alert("if not, display ");
 }
-
-//QUESTION 17
 
 var city = "karachi"; 
 if (city = "Karachi"); {

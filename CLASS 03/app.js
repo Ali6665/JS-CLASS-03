@@ -209,16 +209,15 @@ if (num1 < num2 || num1 > num2) {
 // Q 01
 
 
-var password = "mypassword"; // Change this to test different cases
-
-if (password !== "") { // Check if password is not empty
-    if (password.length <= 5) { // Check if password length is not greater than 5
-        alert("Password must be greater than 5");
+var password = "mypassword";
+if (password !== "") { 
+    if (password <= 5) { 
+        alert("Password  greater than 5");
     } else {
         alert("Ok");
     }
 } else {
-    alert("Password cannot be empty");
+    alert("Password cannot empty");
 }
 
 
@@ -367,20 +366,18 @@ if (false) {
 // Q 07
 
 
-const secretNumber = Math.floor(Math.random() * 10) + 1;
-const userInput = prompt("Guess the secret number between 1 and 10:");
-const userGuess = parseInt(userInput, 10);
+var secretNumber = 10 + 1;
 
+var guess = prompt("Guess the secret number (between 1 and 10):" , 10);
 
-if (userGuess === secretNumber) {
-  alert("Bingo! Correct answer");
+if (guess === secretNumber) {
+    alert("Correct answer");
+} else if (guess + 1 === secretNumber) {
+    alert("Close  correct answer");
+} else {
+    alert("Wrong answer. " + secretNumber);
 }
- else if (userGuess + 1 === secretNumber) {
-  alert("Close enough to the correct answer");
-} 
-else {
-  alert('Wrong guess! The secret number was ');
-}
+
 
 // Q 08
 
@@ -427,9 +424,128 @@ if (temperature > 40) {
   alert("OMG! Today's weather is so Cool.");
 }
  else {
-  alert("It seems quite cold outside.");
+  alert("It seems quite cold outside.")
+ }
+
+
+
+//  chapter 9-11 end
+
+
+
+// chapter 12-13
+
+
+
+// IF...ELSE & ELSE IF STATEMENT,
+// TESTING SET OF CONDITIONS
+
+
+// Q 01
+
+
+var inpu_t = prompt("Enter a character:");
+  var ch =  inpu_t = prompt("Enter a character:");
+  var ai = ch.charCodeAt(0);
+
+if (inpu_t) {
+
+
+  if (ai >= 48 && ai <= 57) {
+    console.log(ch + " number.");
+  } else if (ascii >= 65 && ai <= 90) {
+    console.log(ch + " uppercase letter.");
+  } else if (ascii >= 97 && ai <= 122) {
+    console.log(ch + " lowercase letter.");
+  } else {
+    console.log("The character is not a number,");
+  }
+} else {
+  console.log("No input provided.");
+}
+
+
+// Q 03
+
+var input = prompt("Enter a number:");
+var num = 1;
+
+
+if (num) {
+  if (num > 0) {
+    console.log(" number is positive.");
+  } else if (num < 0) {
+    console.log(" number is negative.");
+  } else {
+    console.log(" number is zero.");
+  }
+} else {
+  console.log(" Please enter a valid number.");
+}
+
+
+// Q 05
+
+
+
+var correctPassword = "YourPassword123";
+var userPassword = prompt("Please enter your password:");
+
+
+if (userPassword === null) {
+  
+  alert("Please enter your password");
+} else if (userPassword === correctPassword) {
+
+  alert("Correct! The password you entered matches the original password");
+} else {
+  alert("Incorrect password");
+}
+
+
+// Q 06
+
+var greeting;
+var hour = 13;
+if (hour < 18) {
+  console.log ( "Good day");
+} else {
+  console.log ( "Good evening");
 }
 
 
 
+// Q 07
 
+
+var hour = parseInt(time24.substring(0, 2));
+  var minute = parseInt(time24.substring(2, 4));
+  var period = "";
+
+ 
+  if (hour >= 12) {
+    period = "pm";
+  } else {
+    period = "am";
+  }
+
+ 
+  if (hour === 0) {
+ 
+    hour = 12;
+  } else if (hour > 12) {
+    hour = hour - 12;
+  } 
+
+  
+  if (minute === 0) {
+
+    return hour + period;
+  } else {
+   
+    if (minute < 10) {
+      minute = "0" + minute;
+    }
+    return hour + ":" + minute + period;
+  }
+var timeInput = prompt("Enter time in 24-hour format (e.g., 1900 for 7pm):");
